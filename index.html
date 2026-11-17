@@ -561,6 +561,8 @@ html[data-lang=en] .progress{transform-origin:left}
 .person .nm{background:linear-gradient(90deg,var(--gold-deep),var(--gold),var(--gold-deep));background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:sheen 6s ease-in-out infinite}
 @keyframes sheen{0%,100%{background-position:0% 0}50%{background-position:100% 0}}
 @media (prefers-reduced-motion: reduce){.person .nm{animation:none}}
+/* keep the dots under the final ي inside the painted area of the gold name */
+.person .nm{padding-bottom:.4em;margin-bottom:1rem;line-height:1.4}
 </style>
 </head>
 <body>
