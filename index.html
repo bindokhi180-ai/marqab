@@ -2,6 +2,7 @@
 <html lang="ar" dir="rtl" data-lang="ar">
 <head>
 <meta charset="utf-8">
+<script>try{history.scrollRestoration="manual"}catch(e){}window.scrollTo(0,0);</script>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>مَرْقَب · تذكارٌ يليق بالمكان</title>
 <meta name="description" content="مَرْقَب: تذكارات فاخرة لمعالم المملكة، من كل مناطقها. مجسمات بخامات حقيقية، بقصة وعلبة تليق بالهدية.">
@@ -1140,7 +1141,7 @@ footer .mark{margin-bottom:.35em}
     pages.forEach(function(p){ p.classList.toggle('on',p===page); });
     var top=h.indexOf('piece/')===0?'collection':h;
     [].forEach.call(document.querySelectorAll('nav.main a'),function(a){ a.classList.toggle('on',a.getAttribute('data-nav')===top); });
-    window.scrollTo(0,0);
+    window.scrollTo({top:0,left:0,behavior:'instant'});
     arm(page);
     if(h==='map' && !document.getElementById('panel').firstChild) pick('riyadh');
   }
@@ -1297,6 +1298,7 @@ footer .mark{margin-bottom:.35em}
       b.addEventListener('pointerleave',function(){ b.style.setProperty('--mx','0px'); b.style.setProperty('--my','0px'); });
     });
   })();
+  addEventListener('pageshow',function(e){ if(e.persisted) window.scrollTo({top:0,left:0,behavior:'instant'}); });
 })();
 </script>
 </body>
